@@ -1,0 +1,54 @@
+body {
+    background-image: url('/assets/cell.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 94vh;
+}
+
+body h1 {
+    position: absolute;
+    left: 60vh;
+    color: rgb(170, 170, 170);
+    top: 35vh;
+}
+
+body h2 {
+    position: absolute;
+    left: 110vh;
+    top: 60vh;
+    color: rgb(170, 170, 170);
+}
+
+#dig {
+    position: absolute;
+    left: 105vh;
+    top: 68vh;
+    padding: 35px;
+    opacity: 0.1;
+}
+
+#inventory {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: red;
+}
+
+#spoon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    left: 53vh;
+    top: 60vh;
+    transition: transform 0.15s;
+}
+
+#spoon:hover {
+    transform: scale(1.05) rotate(-10deg);
+
+}
