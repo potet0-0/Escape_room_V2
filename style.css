@@ -78,9 +78,31 @@ body h2 {
 }
 
 #move_back {
-    display: none;
     position: absolute;
-    top: 68vh;
-    right: 67vh;
-    padding: 35px;
+    top: 32vh;
+    right: 36vh;
+    padding-bottom: 150px;
+    padding-right: 130px;
+    background-color: #000000;
+    opacity: .1;
+}
+
+#cafeteria_text {
+    position: absolute;
+    top: 8vh;
+    right: 70vh;
+    font-size: xx-large;
+    color: white;
+    
+}
+
+#bread {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    left: 21%;
+    top: 70%;
+    transition: left 1s ease, top 1s ease;
 }
