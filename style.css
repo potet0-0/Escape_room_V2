@@ -1,17 +1,19 @@
+/* ---- CELL PAGE ---- */
+
 body {
-    background-image: url('/assets/cell.png');
+    background-image: url('/assets/cell.png'); /* default bg, the cell */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+    background-attachment: fixed; /* keeps it from scrolling with the page */
+    position: relative; /* needed so absolute children work */
     min-height: 94vh;
 }
 
 body h1 {
     position: absolute;
     left: 60vh;
-    color: rgb(170, 170, 170);
+    color: rgb(170, 170, 170); /* grey-ish, fits the prison vibe */
     top: 35vh;
 }
 
@@ -26,15 +28,15 @@ body h2 {
     position: absolute;
     left: 105vh;
     top: 68vh;
-    padding: 35px;
-    opacity: 0.1;
+    padding: 35px; /* big invisible click area */
+    opacity: 0.1; /* basically invisible but still clickable */
 }
 
 #inventory {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: red;
+    color: red; /* stands out in the corner */
 }
 
 #spoon {
@@ -45,17 +47,15 @@ body h2 {
     position: absolute;
     left: 53vh;
     top: 60vh;
-    transition: transform 0.15s;
+    transition: transform 0.15s; /* smooth little hover wiggle */
 }
 
 #spoon:hover {
-    transform: scale(1.05) rotate(-10deg);
-
+    transform: scale(1.05) rotate(-10deg); /* fun little tilt on hover */
 }
 
-
 #escape {
-    display: none;
+    display: none; /* hidden until the hole is big enough */
     position: absolute;
     top: 68vh;
     right: 67vh;
@@ -63,10 +63,12 @@ body h2 {
 }
 
 #escape_cell {
-    display: none;
+    display: none; /* same, shown by JS when ready */
 }
 
-/*cafeteria page */
+
+/* ---- CAFETERIA PAGE ---- */
+
 .body_cafeteria {
     background-image: url('/assets/cafeteria.png');
     background-repeat: no-repeat;
@@ -81,10 +83,10 @@ body h2 {
     position: absolute;
     top: 32vh;
     right: 36vh;
-    padding-bottom: 150px;
+    padding-bottom: 150px; /* big invisible button area */
     padding-right: 130px;
     background-color: #000000;
-    opacity: .1;
+    opacity: .1; /* nearly invisible */
 }
 
 #cafeteria_text {
@@ -93,7 +95,6 @@ body h2 {
     right: 70vh;
     font-size: xx-large;
     color: white;
-
 }
 
 #bread {
@@ -104,22 +105,22 @@ body h2 {
     position: absolute;
     left: 21%;
     top: 70%;
-    transition: left 1s ease, top 1s ease;
+    transition: left 1s ease, top 1s ease; /* this is what makes it slide when thrown */
 }
 
 #court {
-    display: none;
+    display: none; /* hidden until bread breaks the window */
     position: absolute;
     top: 28vh;
     right: 83vh;
     padding: 35px;
     background-color: white;
-    opacity: .1;
+    opacity: .1; /* invisible clickable zone */
     color: #676666;
 }
 
 
-/*Courtyard page*/
+/* ---- COURTYARD PAGE ---- */
 
 .body_courtyard {
     background-image: url('/assets/courtyard.png');
@@ -139,13 +140,105 @@ body h2 {
     color: #acacac;
 }
 
-#code_room {
+#hallway {
     position: absolute;
     top: 45vh;
     right: 10vh;
     padding: 35px;
-    padding-top: 250px;
+    padding-top: 250px; /* tall invisible button on the right side */
     background-color: white;
-    opacity: .01;
+    opacity: .01; /* super invisible */
     color: #676666;
+}
+
+#code_room {
+    position: absolute;
+    padding: 100px; /* big click zone in the middle */
+    background-color: #ffffff;
+    right: 45vh;
+    top: 45vh;
+    opacity: .1;
+}
+
+
+/* ---- HALLWAY PAGE ---- */
+
+.body_hallway {
+    background-image: url('/assets/hallway.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 94vh;
+}
+
+#hallway_text {
+    position: absolute;
+    top: 2vh;
+    right: 63vh;
+    font-size: xx-large;
+    color: #acacac;
+}
+
+#go_back {
+    position: absolute;
+    top: 59vh;
+    right: 47vh;
+    padding-left: 10px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    color: #ffffff;
+    opacity: 0.2; /* just barely visible */
+}
+
+
+/* ---- CODE ROOM ---- */
+
+.body_code {
+    background-image: url('/assets/gray.jpg'); /* gray room for the keypad */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 98vh;
+}
+
+#keypad {
+    position: absolute;
+    top: 40%;
+    left: 40%; /* roughly centered */
+    background-color: gray;
+    padding: 10px;
+}
+
+#code_display {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 8px; /* little gap before the buttons */
+}
+
+#code_message {
+    color: red; /* error by default, JS changes it to green if correct */
+    font-size: 12px;
+}
+
+#keypad_buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns like a real keypad */
+    gap: 3px;
+}
+
+.key {
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#move_back_code {
+    padding: 50px;
+    background-color: #ffffff;
 }

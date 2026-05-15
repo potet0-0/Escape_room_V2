@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="body_code">
+
+    <a href="courtyard.html" id="move_back_code">go back</a>
+
+    <div id="keypad">
+        <div id="code_display">_ _ _</div>
+        <p id="code_message"></p>
+        <div id="keypad_buttons">
+            <button class="key" onclick="pressKey('1')">1</button>
+            <button class="key" onclick="pressKey('2')">2</button>
+            <button class="key" onclick="pressKey('3')">3</button>
+            <button class="key" onclick="pressKey('4')">4</button>
+            <button class="key" onclick="pressKey('5')">5</button>
+            <button class="key" onclick="pressKey('6')">6</button>
+            <button class="key" onclick="pressKey('7')">7</button>
+            <button class="key" onclick="pressKey('8')">8</button>
+            <button class="key" onclick="pressKey('9')">9</button>
+            <button class="key" onclick="pressDelete()">del</button>
+            <button class="key" onclick="pressKey('0')">0</button>
+            <button class="key" onclick="pressEnter()">enter</button>
+        </div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
