@@ -93,7 +93,7 @@ body h2 {
     right: 70vh;
     font-size: xx-large;
     color: white;
-    
+
 }
 
 #bread {
@@ -115,5 +115,37 @@ body h2 {
     padding: 35px;
     background-color: white;
     opacity: .1;
-    color: #676666; 
+    color: #676666;
+}
+
+
+/*Courtyard page*/
+
+.body_courtyard {
+    background-image: url('/assets/courtyard.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 94vh;
+}
+
+#courtyard_text {
+    position: absolute;
+    top: 28vh;
+    right: 83vh;
+    font-size: xx-large;
+    color: #acacac;
+}
+
+#code_room {
+    position: absolute;
+    top: 45vh;
+    right: 10vh;
+    padding: 35px;
+    padding-top: 250px;
+    background-color: white;
+    opacity: .01;
+    color: #676666;
 }
