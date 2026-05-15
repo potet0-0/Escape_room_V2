@@ -106,3 +106,14 @@ body h2 {
     top: 70%;
     transition: left 1s ease, top 1s ease;
 }
+
+#court {
+    display: none;
+    position: absolute;
+    top: 28vh;
+    right: 83vh;
+    padding: 35px;
+    background-color: white;
+    opacity: .1;
+    color: #676666; 
+}

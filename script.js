@@ -60,12 +60,15 @@ if (document.getElementById('bread')) {
 
     const bread = document.getElementById('bread');
     const cafeteriaDiv = document.querySelector('.body_cafeteria');
+    const court = document.getElementById('court');
 
     // Restore state on page load
     const breadThrown = localStorage.getItem('breadThrown') === 'true';
     if (breadThrown) {
         bread.style.display = 'none';
         cafeteriaDiv.style.backgroundImage = "url('assets/cafeteria_broken.png')";
+        court.style.display = 'block';
+        document.getElementById('cafeteria_text').textContent = 'jump out the broken window!';
     }
 
     bread.addEventListener('click', () => {
@@ -76,7 +79,9 @@ if (document.getElementById('bread')) {
         setTimeout(() => {
             bread.style.display = 'none';
             cafeteriaDiv.style.backgroundImage = "url('assets/cafeteria_broken.png')";
-            localStorage.setItem('breadThrown', 'true'); // save it
+            court.style.display = 'block';
+            document.getElementById('cafeteria_text').textContent = 'jump out the broken window!';
+            localStorage.setItem('breadThrown', 'true');
         }, 1000);
     });
 }
