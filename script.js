@@ -19,14 +19,6 @@ spoon.addEventListener('click', () => {
 console.log(sessionStorage.getItem('hasSpoon'));
 
 
-//hide hole untill spoon is true
-if (hasSpoon === false) {
-    document.getElementById('dig').style.display = 'none';
-    if (hasSpoon === true) {
-        document.getElementById('dig').style.display = 'block';
-    }
-}
-
 
 let digHole = document.getElementById('dig')
 let count = 0;
@@ -41,5 +33,16 @@ digHole.addEventListener('click', () => {
     if (count >= MAX_DIG) {
         document.getElementById('title').textContent = 'the hole is now an exit';
         digHole.style.pointerEvents = 'none';
+
+        // show the escape button 
+        document.getElementById('escape').style.display = 'block';
+        document.getElementById('escape_cell').style.display = 'block';
     }
+});
+
+
+let escape = document.getElementById('escape');
+escape.addEventListener('click', () => {
+    document.getElementById('title').textContent = '(move to cafeteria now)';
+    
 });

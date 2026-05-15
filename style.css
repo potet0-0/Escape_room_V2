@@ -52,3 +52,35 @@ body h2 {
     transform: scale(1.05) rotate(-10deg);
 
 }
+
+
+#escape {
+    display: none;
+    position: absolute;
+    top: 68vh;
+    right: 67vh;
+    padding: 35px;
+}
+
+#escape_cell {
+    display: none;
+}
+
+/*cafeteria page */
+.body_cafeteria {
+    background-image: url('/assets/cafeteria.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 94vh;
+}
+
+#move_back {
+    display: none;
+    position: absolute;
+    top: 68vh;
+    right: 67vh;
+    padding: 35px;
+}
